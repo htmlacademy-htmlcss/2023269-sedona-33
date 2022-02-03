@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="styles/styles.css">
   <title>Страница каталога</title>
 </head>
 
@@ -15,7 +16,7 @@
           <a class="navigation-link" href="index.html">Главная</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="about.html">О Седоне</a>
+          <a class="navigation-link" href="#">О Седоне</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link">Гостиницы</a>
@@ -97,30 +98,32 @@
       </form>
       <h2 class="visually-hidden">Результат поиска:</h2>
       <b class="select-result">Найдено гостиниц: 38</b>
-      <select class="select-control" aria-label="Сортировка">
-        <option value="popular">Сначала популярное</option>
-        <option value="cheap">Сначала дешёвое</option>
-        <option value="expensive">Сначала дорогое</option>
-      </select>
-      <a href="#" class="button button-light">
-        <span class="visually-hidden">Показать таблицу</span>
-      </a>
-      <a class="button" href="#">
-        <span class="visually-hidden">Показать список</span>
-      </a>
-      <a class="button" href="#">
-        <span class="visually-hidden">Показать карточки</span>
-      </a>
+      <div class="sorting-container">
+        <select class="select-control" aria-label="Сортировка">
+          <option value="popular">Сначала популярное</option>
+          <option value="cheap">Сначала дешёвое</option>
+          <option value="expensive">Сначала дорогое</option>
+        </select>
+        <a href="#" class="button button-light">
+          <span class="visually-hidden">Показать таблицу</span>
+        </a>
+        <a class="button" href="#">
+          <span class="visually-hidden">Показать список</span>
+        </a>
+        <a class="button" href="#">
+          <span class="visually-hidden">Показать карточки</span>
+        </a>
+      </div>
       <ul class="product-list">
         <li class="product-card">
           <h3 class="product-card-title">
-            <a href="product.html">Amara Resort & Spa</a> </h3>
-          <a class="product-card-link" href="product.html">
-            <img class="product-card-image" src="catalog/amara-resort.jpg" width="300" height="206" alt=""></a>
+            <a href="#">Amara Resort & Spa</a> </h3>
+          <a class="product-card-link" href="#">
+            <img class="product-card-image" src="images/amara-resort.jpg" width="300" height="206" alt=""></a>
           <p class="product-price">Гостиница
             <b class="product-card-price">От 4000 ₽</b></p>
           <a class="product-card-button button" href="#">подробнее</a>
-          <a class="product-card-button button" href="#">В избранное</a>
+          <a class="product-button button" href="#">В избранное</a>
           <img src="" class="product-raiting" alt="">
           <p class="visually-hidden">4 звезды
             <span class="product-raiting"></span>
@@ -129,15 +132,15 @@
         </li>
         <li class="product-card">
           <h3 class="product-card-title">
-            <a href="product.html">Desert Quail Inn</a></h3>
-          <a class="product-card-link" href="product.html">
-            <img class="product-card-image" src="catalog/desert-quail.jpg" width="300" height="206" alt="">
+            <a href="#">Desert Quail Inn</a></h3>
+          <a class="product-card-link" href="#">
+            <img class="product-card-image" src="images/desert-quail.jpg" width="300" height="206" alt="">
           </a>
           <p class="product-price">Гостиница
             <b class="product-card-price">От 3000 ₽</b>
           </p>
           <a class="product-card-button button" href="#">подробнее</a>
-          <a class="product-card-button button" href="#">В избранное</a>
+          <a class="product-button button" href="#">В избранное</a>
           <p class="visually-hidden">3 звезды
             <span class="product-raiting"></span>
           </p>
@@ -145,15 +148,15 @@
         </li>
         <li class="product-card">
           <h3 class="product-card-title">
-            <a href="product.html">Villas at Poco Diablo</a></h3>
-          <a class="product-card-link" href="product.html">
-            <img class="product-card-image" src="catalog/villas.jpg" width="300" height="206" alt="">
+            <a href="#">Villas at Poco Diablo</a></h3>
+          <a class="product-card-link" href="#">
+            <img class="product-card-image" src="images/villas.jpg" width="300" height="206" alt="">
           </a>
           <p class="product-price">Гостиница
             <b class="product-card-price">От 2000 ₽</b>
           </p>
           <a class="product-card-button button" href="#">подробнее</a>
-          <a class="product-card-button button" href="#">В избранное</a>
+          <a class="product-button button" href="#">В избранное</a>
           <p class="visually-hidden">2 звезды
             <span class="product-raiting"></span>
           </p>
@@ -161,15 +164,15 @@
         </li>
         <li class="product-card">
           <h3 class="product-card-title">
-            <a href="product.html">GreenTree Inn</a></h3>
+            <a href="#">GreenTree Inn</a></h3>
           <a class="product-card-link">
-            <img class="product-card-image" src="catalog/greentree.jpg" width="300" height="206" alt="">
+            <img class="product-card-image" src="images/greentree.jpg" width="300" height="206" alt="">
           </a>
           <p class="product-price">Гостиница
             <b class="product-card-price">От 3000 ₽</b>
           </p>
           <a class="product-card-button button" href="#">подробнее</a>
-          <a class="product-card-button button" href="#">В избранное</a>
+          <a class="product-button button" href="#">В избранное</a>
           <p class="visually-hidden">2 звезды
             <span class="product-raiting"></span>
           </p>
@@ -206,7 +209,7 @@
         </label>
       </section>
     </section>
-    <section class="subscribe">
+    <section class="subscribe-catalog">
       <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
       <p class="subscribe-info">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form action="" method="post">
@@ -224,7 +227,7 @@
       <h2 class="visually-hidden">Мы в соцсетях</h2>
       <ul class="footer-social-list">
         <li class="footer-social-item">
-          <a class="button" href=" https://twitter.com/htmlacademy.ru">
+          <a class="button" href="https://twitter.com/htmlacademy.ru">
             <span class="visually-hidden">Твиттер</span>
           </a>
         </li>

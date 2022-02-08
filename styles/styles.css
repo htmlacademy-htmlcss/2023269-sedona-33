@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,17 +10,60 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 
 }
 
+html {
+  height: "100%";
+  background: #F2F2F2;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0 auto;
+  width: 1200px;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 36px;
   color: #000000;
-  background-color: #F2F2F2;
+  background-color: #ffffff;
+}
+
+.main-container {
+  flex-grow: 1;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.page-logo {
+  width: 130px;
+  margin-right: 30px;
+}
+
+.navigation-list {
+  width: 450px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user {
+  width: 300px;
+  margin-left: auto;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
 }
 
 .navigation-list a {
@@ -42,7 +85,6 @@ body {
 
 .main-index {
   background-image: url("../images/index-bg.png");
-  background-size: 1200px 485px;
   background-repeat: no-repeat;
 }
 
@@ -59,14 +101,52 @@ body {
   text-align: center;
 }
 
+
 .advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   text-align: center;
+}
+
+
+
+.advantages-list-more {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+li.main-item:nth-child(1),
+li.main-item:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.advantages-item {
+  width: 400px;
+  background: rgba(131, 179, 211, 0.12);
+}
+
+li.advantages-item:nth-child(4) {
+  background: rgba(131, 179, 211, 0.2);
+}
+
+li.advantages-item:nth-child(2) {
+  background: #FFFFFF;
+}
+
+.advantages-wraper {
+  width: 400px;
+  background: #83B3D3;
 }
 
 .advantages-title {
   font-size: 24px;
   line-height: 28px;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -80,32 +160,8 @@ body {
   color: #FFFFFF;
 }
 
-.box-1,
-.box-2,
-.box-3,
-.box-4,
-.box-5,
-.box-home,
-.box-souvenirs,
-.box-eat {
-  width: 400px;
-  height: 384px;
-  background: #83B3D3;
-}
-
-.box-home,
-.box-souvenirs,
-.box-3,
-.box-5 {
-  background: rgba(131, 179, 211, 0.12);
-}
-
-.box-eat {
+.catalog {
   background: #FFFFFF;
-}
-
-.box-4 {
-  background: rgba(131, 179, 211, 0.2);
 }
 
 .catalog-title,
@@ -131,13 +187,12 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-
+  background: #756257;
 }
 
 .subscribe {
   background-color: #83B3D3;
   background-image: url("../images/subscribe-bg.jpg");
-  background-size: 1200px 411px;
   background-repeat: no-repeat;
 }
 
@@ -150,8 +205,15 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  background: #83B3D3;
   text-align: center;
   text-transform: uppercase;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: space-around;
+  background: #FFFFFF;
 }
 
 .contacts-phone {
@@ -161,21 +223,33 @@ body {
   line-height: 40px;
 }
 
-.main-catalog {
+.catalog-products {
   background-color: #83B3D3;
   background-image: url("../images/catalog-bg.jpg");
-  background-size: 1200px 408px;
   background-repeat: no-repeat;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.catalog-link {
+  font-size: 16px;
+line-height: 21px;
+color: #FFFFFF;
 }
 
 .main-title {
   font-weight: 700;
-  width: 528px;
-  height: 68px;
+  width: 100%;
   color: #FFFFFF;
 }
 
 .catalog-filter {
+  display: flex;
+  justify-content: space-around;
   color: #FFFFFF;
 }
 
@@ -189,6 +263,15 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
+}
+
+.catalog-filter-group {
+  margin-left: 72px;
+}
+
+.button-catalog {
+  margin-left: auto;
+  margin-right: 72px;
 }
 
 .button-apply {
@@ -209,10 +292,33 @@ body {
   line-height: 39px;
 }
 
+.sorting-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 72px;
+  margin-right: 72px;
+}
+
 .sorting-container a {
   color: #000000;
   font-size: 12px;
   text-decoration: none;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-left: 72px;
+  margin-right: 54px;
+  padding: 0;
+}
+
+.product-card {
+  width: 300px;
+  padding: 20px;
+  margin-left: 18px;
+  margin-bottom: 10px;
 }
 
 .product-card-title a {
@@ -284,4 +390,8 @@ body {
 .pagination-number {
   font-size: 18px;
   line-height: 23px;
+}
+
+.visually-hidden {
+  visibility: hidden;
 }

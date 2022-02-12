@@ -34,31 +34,37 @@ body {
 }
 
 .main-container {
-  flex-grow: 1;
   width: 1200px;
+  padding-top: 51px;
   margin: 0 auto;
 }
 
 .navigation {
   display: flex;
-  width: 1200px;
-  margin: 0 auto;
+  align-items: center;
+  margin: 0 70px 0 70px;
 }
 
 .page-logo {
+  display: block;
   width: 130px;
+  height: 70px;
+  margin: 0;
+  padding: 0;
   margin-right: 30px;
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   width: 450px;
   margin: 0;
-  padding: 0;
+  padding: 20px 17px;
+  list-style-type: none;
 }
 
-.navigation-user {
-  width: 300px;
-  margin-left: auto;
+.navigation-item:not(:last-child) {
+  margin-right: 34px;
 }
 
 .logo {
@@ -67,20 +73,35 @@ body {
 }
 
 .navigation-list a {
+  display: block;
+  padding: 0;
+  margin: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  margin-right: 34px;
   color: #000000;
   text-decoration: none;
 }
 
+.navigation-list a:last-child {
+  margin-right: 0;
+}
+
 .navigation-user {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  width: 300px;
+  padding-right: 0;
   font-size: 16px;
   line-height: 20px;
 }
 
-.navigation-item .navigation-button {
+.navigation-user .navigation-button {
   color: #FFFFFF;
+  background: #756257;
+  border-radius: 4px;
 }
 
 .main-index {
@@ -89,6 +110,7 @@ body {
 }
 
 .main-header {
+  padding-top: 145px;
   font-weight: 700;
   font-size: 30px;
   text-align: center;
@@ -101,22 +123,22 @@ body {
   text-align: center;
 }
 
-
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  padding-top: 80px;
   width: 100%;
   text-align: center;
+  list-style-type: none;
 }
-
-
 
 .advantages-list-more {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  list-style-type: none;
 }
 
 li.main-item:nth-child(1),
@@ -128,6 +150,7 @@ li.main-item:nth-child(2) {
 
 .advantages-item {
   width: 400px;
+  min-height: 384px;
   background: rgba(131, 179, 211, 0.12);
 }
 
@@ -145,15 +168,26 @@ li.advantages-item:nth-child(2) {
 }
 
 .advantages-title {
+  margin: 0;
+  margin-top: 97px;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
 }
 
 .advantages-description {
+  margin: 30px 0;
   color: #333333;
   font-size: 24px;
   line-height: 28px;
+}
+
+.advantages-more {
+  margin-top: 23px;
+}
+
+.advantages-icon {
+  margin-top: 89px;
 }
 
 .item-title {
@@ -161,19 +195,24 @@ li.advantages-item:nth-child(2) {
 }
 
 .catalog {
+  padding: 91px 0;
   background: #FFFFFF;
 }
 
 .catalog-title,
 .subscribe-title {
+  margin: 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .catalog-info,
 .subscribe-info {
+  margin: 0;
+  margin-top: 29px;
   line-height: 26px;
   font-size: 22px;
   color: #333333;
@@ -181,7 +220,11 @@ li.advantages-item:nth-child(2) {
 }
 
 .catalog .catalog-link {
+  display: block;
+  width: 575px;
   color: #FFFFFF;
+  margin: 0 auto;
+  margin-top: 56px;
   font-size: 20px;
   line-height: 36px;
   text-align: center;
@@ -194,6 +237,7 @@ li.advantages-item:nth-child(2) {
   background-color: #83B3D3;
   background-image: url("../images/subscribe-bg.jpg");
   background-repeat: no-repeat;
+  padding: 94px 0;
 }
 
 .subscribe-title,
@@ -201,10 +245,21 @@ li.advantages-item:nth-child(2) {
   color: #FFFFFF;
 }
 
+.subscribe-foter {
+  color: #000000;
+}
+
+.subscribe-form-email {
+  display: block;
+  width: 800px;
+  margin: 46px auto 0 auto;
+}
+
 .subscribe-button {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  color: #FFFFFF;
   background: #83B3D3;
   text-align: center;
   text-transform: uppercase;
@@ -213,7 +268,24 @@ li.advantages-item:nth-child(2) {
 .page-footer {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  padding: 40px 0;
   background: #FFFFFF;
+}
+
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.footer-social-item {
+  margin: 0;
+  margin-right: 30px;
+}
+
+.footer-social-list:last-child {
+  margin-right: 0;
 }
 
 .contacts-phone {
@@ -223,10 +295,10 @@ li.advantages-item:nth-child(2) {
   line-height: 40px;
 }
 
-.catalog-products {
-  background-color: #83B3D3;
+.main-catalog {
   background-image: url("../images/catalog-bg.jpg");
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 fieldset {
@@ -236,12 +308,15 @@ fieldset {
 }
 
 .catalog-link {
+  margin: 0;
+  margin-left: 72px;
   font-size: 16px;
-line-height: 21px;
-color: #FFFFFF;
+  line-height: 21px;
+  color: #FFFFFF;
 }
 
 .main-title {
+  margin: 30px 0 0 71px;
   font-weight: 700;
   width: 100%;
   color: #FFFFFF;
@@ -249,38 +324,57 @@ color: #FFFFFF;
 
 .catalog-filter {
   display: flex;
-  justify-content: space-around;
+  margin: 45px 71px 0 71px;
   color: #FFFFFF;
 }
 
+.catalog-filter-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+  list-style-type: none;
+}
+
 .catalog-filter-title {
+  margin-right: 67px;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
 }
 
 .catalog-filter-item {
+  padding: 0;
+  margin: 0;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
 }
 
-.catalog-filter-group {
-  margin-left: 72px;
+.catalog-filter-item:not(:first-child) {
+  padding-top: 13px;
 }
 
 .button-catalog {
-  margin-left: auto;
-  margin-right: 72px;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0 0 auto;
 }
 
 .button-apply {
+  width: 160px;
+  height: 48px;
+  background: #83B3D3;
   color: #FFFFFF;
   font-size: 16px;
   line-height: 21px;
+  border-radius: 4px;
 }
 
 .button-reset {
+  background: none;
+  margin-top: 20px;
   color: #FFFFFF;
   font-size: 18px;
   line-height: 23px;
@@ -290,13 +384,17 @@ color: #FFFFFF;
 .select-result {
   font-size: 30px;
   line-height: 39px;
+  text-transform: uppercase;
+}
+
+.select-control {
+  width: 287px;
 }
 
 .sorting-container {
   display: flex;
   justify-content: space-between;
-  margin-left: 72px;
-  margin-right: 72px;
+  margin: 130px 72px 0 72px;
 }
 
 .sorting-container a {
@@ -309,16 +407,27 @@ color: #FFFFFF;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  margin-left: 72px;
-  margin-right: 54px;
+  margin: 53px 72px 0 72px;
   padding: 0;
+  list-style-type: none;
 }
 
 .product-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   width: 300px;
   padding: 20px;
-  margin-left: 18px;
+  margin-right: 18px;
   margin-bottom: 10px;
+}
+
+.product-card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.product-card-link {
+  order: -1;
 }
 
 .product-card-title a {
@@ -329,8 +438,16 @@ color: #FFFFFF;
   text-decoration: none;
 }
 
+.product-card-title {
+  width: 100%;
+  margin: 0;
+  margin-top: 16px;
+}
+
 .product-price,
 .product-card-price {
+  display: block;
+  width: 140px;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
@@ -338,6 +455,7 @@ color: #FFFFFF;
 
 .product-card-button,
 .product-button {
+  width: 133px;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 16px;
@@ -349,13 +467,19 @@ color: #FFFFFF;
 
 .product-card-button {
   background: #756257;
+  margin-right: 26px;
 }
 
 .product-button {
+  margin-left: auto;
   background: #83B3D3;
 }
 
 .product-raiting-number {
+  margin-top: 16px;
+  margin-left: auto;
+  width: 160px;
+  background: #F2F2F2;
   color: #333333;
   font-size: 16px;
   line-height: 21px;
@@ -363,7 +487,19 @@ color: #FFFFFF;
   text-transform: uppercase;
 }
 
+#number {
+  margin-left: 51px;
+  width: 160px;
+  height: 48px;
+  font-size: 18px;
+  line-height: 23px;
+}
+
 .pagination-show-more {
+  display: block;
+  margin: 0 auto;
+  margin-top: 64px;
+  width: 620px;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 20px;
@@ -371,15 +507,45 @@ color: #FFFFFF;
   background: #83B3D3;
 }
 
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 72px;
+  margin-top: 60px;
+}
+
+.pagination-list {
+  display: flex;
+}
+
+.subscribe-catalog {
+  margin-top: 73px;
+  padding-bottom: 140px;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.pagination-item {
+  list-style-type: none;
+}
+
 .pagination-link {
+  display: block;
+  width: 55px;
+  height: 55px;
+  box-sizing: border-box;
+  padding: 14px 20px;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  align-items: center;
-  text-align: center;
   text-transform: uppercase;
   background: #83B3D3;
+  border-radius: 4px;
 }
 
 .pagination-current {
@@ -393,5 +559,11 @@ color: #FFFFFF;
 }
 
 .visually-hidden {
-  visibility: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

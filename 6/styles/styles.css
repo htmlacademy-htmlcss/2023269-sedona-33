@@ -34,7 +34,6 @@ body {
 }
 
 .main-container {
-  flex-grow: 1;
   width: 1200px;
   padding-top: 51px;
   margin: 0 auto;
@@ -42,12 +41,16 @@ body {
 
 .navigation {
   display: flex;
-  width: 1200px;
-  margin: 0 auto;
+  align-items: center;
+  margin: 0 70px 0 70px;
 }
 
 .page-logo {
+  display: block;
   width: 130px;
+  height: 70px;
+  margin: 0;
+  padding: 0;
   margin-right: 30px;
 }
 
@@ -56,13 +59,12 @@ body {
   flex-wrap: wrap;
   width: 450px;
   margin: 0;
-  padding: 0;
+  padding: 20px 17px;
   list-style-type: none;
 }
 
-.navigation-user {
-  width: 320px;
-  margin-left: auto;
+.navigation-item:not(:last-child) {
+  margin-right: 34px;
 }
 
 .logo {
@@ -71,23 +73,32 @@ body {
 }
 
 .navigation-list a {
-  display: inline-block;
+  display: block;
   padding: 0;
-  margin: 20px 34px 20px;
+  margin: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  margin-right: 34px;
   color: #000000;
   text-decoration: none;
 }
 
+.navigation-list a:last-child {
+  margin-right: 0;
+}
+
 .navigation-user {
   display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  width: 300px;
+  padding-right: 0;
   font-size: 16px;
   line-height: 20px;
 }
 
-.navigation-item .navigation-button {
+.navigation-user .navigation-button {
   color: #FFFFFF;
   background: #756257;
   border-radius: 4px;
@@ -112,7 +123,6 @@ body {
   text-align: center;
 }
 
-
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
@@ -123,8 +133,6 @@ body {
   text-align: center;
   list-style-type: none;
 }
-
-
 
 .advantages-list-more {
   display: flex;
@@ -308,7 +316,7 @@ fieldset {
 }
 
 .main-title {
-  margin: 35px 0 0 71px;
+  margin: 30px 0 0 71px;
   font-weight: 700;
   width: 100%;
   color: #FFFFFF;
@@ -344,7 +352,7 @@ fieldset {
   line-height: 23px;
 }
 
-.catalog-filter-item:not(.first-child) {
+.catalog-filter-item:not(:first-child) {
   padding-top: 13px;
 }
 
@@ -401,9 +409,13 @@ fieldset {
   margin: 0;
   margin: 53px 72px 0 72px;
   padding: 0;
+  list-style-type: none;
 }
 
 .product-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   width: 300px;
   padding: 20px;
   margin-right: 18px;
@@ -426,8 +438,16 @@ fieldset {
   text-decoration: none;
 }
 
+.product-card-title {
+  width: 100%;
+  margin: 0;
+  margin-top: 16px;
+}
+
 .product-price,
 .product-card-price {
+  display: block;
+  width: 140px;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
@@ -435,6 +455,7 @@ fieldset {
 
 .product-card-button,
 .product-button {
+  width: 133px;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 16px;
@@ -446,13 +467,19 @@ fieldset {
 
 .product-card-button {
   background: #756257;
+  margin-right: 26px;
 }
 
 .product-button {
+  margin-left: auto;
   background: #83B3D3;
 }
 
 .product-raiting-number {
+  margin-top: 16px;
+  margin-left: auto;
+  width: 160px;
+  background: #F2F2F2;
   color: #333333;
   font-size: 16px;
   line-height: 21px;

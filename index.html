@@ -86,16 +86,16 @@
           </div>
           <img class="advantages-town" src="images/advantages-town.jpg" width="800" hight="384" alt="Вид на город">
           <ul class="advantages-list-more">
-            <li>
+            <li class="icon-home">
               <h3 class="advantages-title advantages-more">Жильё</h3>
               <p class="advantages-description">Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
             </li>
-            <li>
+            <li class="icon-eat">
               <h3 class="advantages-title advantages-more">Еда</h3>
               <p class="advantages-description">Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!
               </p>
             </li>
-            <li>
+            <li class="icon-souvenirs">
               <h3 class="advantages-title advantages-more">Сувениры</h3>
               <p class="advantages-description">Не только китайского,<br>но и настоящего местного<br>производства!</p>
             </li>
@@ -192,6 +192,37 @@
         </svg>
     </a>
   </footer>
+
+  <div class="modal-container">
+    <div class="modal-search">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="search-fom" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="date-arrival">
+            <label class="form-label" for="arrival-date">Дата заезда:</label>
+              <input class="date-search search-input" type="text" id="arrival-date" name="appointment-date" placeholder="27 апреля 2020">
+          </p>
+          <p class="dste-departure">
+            <label class="form-label" for="departure-date">Дата выезда:</label>
+              <input class="date-search search-input" type="text" id="departure-date" name="appointment-date" placeholder="1 сентября 2021">
+          </p>
+
+          <p class="people-number">
+            <label class="form-label" for="adults-number">Взрослые:</label>
+              <input class="search-number search-input" type="number" id="adults-number" value="2" name="min-price">
+            <label class="form-label" for="children-number">Взрослые:</label>
+              <input class="search-number search-input" type="number" id="children-number" value="0" name="min-price"> 
+          </p>
+
+          <button class="button-search button" type="submit">Найти</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
 </body>
 
 </html>

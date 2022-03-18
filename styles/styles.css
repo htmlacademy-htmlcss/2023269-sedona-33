@@ -40,6 +40,7 @@ body {
 }
 
 .navigation {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 13px 70px 13px 70px;
@@ -48,7 +49,7 @@ body {
 
 .page-logo {
   position: absolute;
-  left: 302px;
+  left: 70px;
   top: 0;
   width: 130px;
   height: 70px;
@@ -1380,22 +1381,27 @@ label+label .range-input {
 }
 
 .product-card .product-raiting {
+  display: grid;
   height: 17px;
+  margin-top: 25px;
   background-image: url("../images/star.svg");
   background-repeat: space;
   background-position: center;
 }
 
 .star-four {
-  width: 75px;
+  grid-template-columns: 18px 18px 18px 18px;
+  grid-gap: 5.9px;
 }
 
 .star-three {
-  width: 55px;
+  grid-template-columns: 18px 18px 18px;
+  grid-gap: 7px;
 }
 
 .star-two {
-  width: 40px;
+  grid-template-columns: 18px 18px;
+  grid-gap: 7px;
 }
 
 .product-card {
@@ -1405,7 +1411,7 @@ label+label .range-input {
   width: 300px;
   padding: 20px;
   margin-right: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
 .product-card:nth-child(3n) {
@@ -1441,7 +1447,7 @@ label+label .range-input {
 .product-card-title {
   width: 100%;
   margin: 0;
-  margin-top: 16px;
+  margin-top: 13px;
 }
 
 .product-price,
@@ -1449,20 +1455,20 @@ label+label .range-input {
   display: block;
   width: 40%;
   margin: 0;
-  margin-top: 10px;
+  margin-top: 15px;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
 }
 
 .product-price {
-  width: 159px;
+  width: 159.5px;
 }
 
 .product-card-button,
 .product-button {
   width: 133px;
-  margin-top: 18px;
+  margin-top: 16px;
   padding: 8px 0;
   border-radius: 4px;
   color: #FFFFFF;
@@ -1537,7 +1543,7 @@ label+label .range-input {
 }
 
 .product-raiting-number {
-  margin-top: 14px;
+  margin-top: 11px;
   margin-left: auto;
   width: 160px;
   padding: 9px 0;
@@ -1591,7 +1597,7 @@ label+label .range-input {
   position: relative;
   display: block;
   margin: 0 auto;
-  margin-top: 38px;
+  margin-top: 49px;
   width: 620px;
   height: 60px;
   border-radius: 4px;
@@ -1605,8 +1611,8 @@ label+label .range-input {
 
 .pagination-show-more::after {
   position: absolute;
-  top: 85px;
-  left: -230px;
+  top: 93px;
+  left: -220px;
   content: "";
   width: 1055px;
   height: 0;
@@ -1615,7 +1621,7 @@ label+label .range-input {
 
 .pagination-show-more::before {
   position: absolute;
-  top: -35px;
+  top: -30px;
   left: -220px;
   content: "";
   width: 1055px;

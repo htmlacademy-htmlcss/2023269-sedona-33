@@ -133,19 +133,11 @@ body {
   background: #756257;
 }
 
-.navigation-menu li:not(:first-child) a:hover {
+.navigation-item a:hover {
   color: #756257;
 }
 
-.navigation-menu li:not(:first-child) a:active {
-  color: rgba(117, 98, 87, 0.3);
-}
-
-.catalog-menu li:not(:last-child) a:hover {
-  color: #756257;
-}
-
-.catalog-menu li:not(:last-child) a:active {
+.navigation-item a:active {
   color: rgba(117, 98, 87, 0.3);
 }
 
@@ -975,7 +967,7 @@ body {
   padding: 35px 72px 48px 72px;
 }
 
-fieldset {
+.catalog-filter fieldset {
   padding: 0;
   margin: 0;
   border: none;
@@ -1113,7 +1105,7 @@ fieldset {
   content: "";
 }
 
-.catalog-filter-group {
+.catalog-filter .catalog-filter-group {
   margin: 0 auto 0 149px;
 }
 

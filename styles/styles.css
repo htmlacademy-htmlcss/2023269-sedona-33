@@ -104,7 +104,7 @@ body {
 
 }
 
-.navigation-user li:nth-child(2){
+.navigation-user li:nth-child(2) {
   position: relative;
   padding-top: 7px;
   padding-right: 32px;
@@ -326,7 +326,7 @@ body {
   line-height: 21px;
 }
 
-.advantages-more + .advantages-description {
+.advantages-more+.advantages-description {
   margin-top: 20px;
 }
 
@@ -1070,24 +1070,24 @@ fieldset {
   background: rgba(255, 255, 255, 0.6);
 }
 
-.control-input[type="checkbox"]:focus + .control-mark {
+.control-input[type="checkbox"]:focus+.control-mark {
   background: rgba(255, 255, 255, 0.6);
   outline: 3px solid #83B3D3;
 }
 
-.control-input[type="checkbox"] + .control-mark:active {
+.control-input[type="checkbox"]+.control-mark:active {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.control-input[type="radio"]:focus + .control-mark {
+.control-input[type="radio"]:focus+.control-mark {
   box-shadow: inset 0 0 0 3px solid #83B3D3;
 }
 
-.control-input[type="radio"]:checked:focus + .control-mark {
+.control-input[type="radio"]:checked:focus+.control-mark {
   outline: 3px solid #83B3D3;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::after {
+.control-input[type="checkbox"]:checked+.control-mark::after {
   position: absolute;
   top: 5px;
   left: 4px;

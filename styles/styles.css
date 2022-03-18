@@ -731,7 +731,10 @@ body {
   display: block;
 }
 
-.date-arrival:invalid .form-label::after .date-departure:invalid .form-label::after {
+
+
+.date-arrival:invalid .form-label::after,
+.date-departure:invalid .form-label::after {
   display: block;
 }
 
@@ -740,7 +743,8 @@ body {
   display: block;
 }
 
-.date-arrival:valid .form-label::after .date-departure:valid .form-label::after {
+.date-arrival:valid .form-label::after,
+.date-departure:valid .form-label::after {
   display: block;
 }
 

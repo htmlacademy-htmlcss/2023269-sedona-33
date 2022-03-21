@@ -220,11 +220,23 @@ body {
 }
 
 .main-logo {
+  position: relative;
   height: 433px;
   padding-top: 51px;
   background-color: #19567c;
   background-image: url("../images/index-bg.png");
   background-repeat: no-repeat;
+}
+
+.main-logo::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 57px;
+  background-image: url("../images/main-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main-bg {
@@ -261,11 +273,22 @@ body {
   list-style-type: none;
 }
 
+.advantages-item {
+  box-sizing: border-box;
+  padding: 98px 75px 50px 75px;
+}
+
 .advantages-list-more {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
   list-style-type: none;
+}
+
+.advantages-list-more li {
+  box-sizing: border-box;
+  padding: 184px 75px 20px 75px;
+  margin-top: 0;
 }
 
 .advantages-list-more .icon-home {
@@ -294,11 +317,11 @@ body {
   min-height: 384px;
 }
 
-.main-item:nth-child(1),
-.main-item:nth-child(2) {
+.advantages-item.main-item {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  padding: 0;
 }
 
 .advantages-list .advantages-item:nth-child(3),
@@ -312,40 +335,39 @@ body {
 
 .advantages-wraper {
   box-sizing: border-box;
-  padding: 0;
+  padding: 97px 90px 50px 90px;
   width: 400px;
   background: #83B3D3;
 }
 
 .advantages-title {
   margin: 0;
-  margin-top: 97px;
-  padding: 0 90px;
+  margin-bottom: 30px;
+  padding: 0;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
 }
 
 .advantages-description {
-  margin: 30px 0;
-  padding: 0 75px;
+  margin: 0;
+  padding: 0;
   color: #333333;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
 }
 
-.advantages-more .advantages-description {
-  padding: 0 75px;
+.advantages-description+.advantages-description {
+  margin-top: 30px;
+}
+
+.advantages-more {
+  margin-bottom: 0;
 }
 
 .advantages-more+.advantages-description {
   margin-top: 20px;
-}
-
-.advantages-more {
-  padding: 184px 75px 0 75px;
-  margin-top: 0;
 }
 
 .item-title {
@@ -353,14 +375,14 @@ body {
 }
 
 .catalog {
-  padding: 91px 0;
+  padding: 91px 240px;
   background: #FFFFFF;
 }
 
 .catalog-title,
 .subscribe-title {
   margin: 0;
-  padding: 0 50px;
+  padding: 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -372,7 +394,7 @@ body {
 .subscribe-info {
   margin: 0;
   margin-top: 29px;
-  padding: 0 240px;
+  padding: 0;
   line-height: 26px;
   font-size: 22px;
   color: #333333;
@@ -403,7 +425,7 @@ body {
   background-image: url("../images/subscribe-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 94px 0;
+  padding: 94px 200px;
 }
 
 .subscribe-title,
@@ -657,11 +679,15 @@ body {
 }
 
 .form-label {
+  width: 150px;
   padding-top: 6px;
-  padding-right: 10px;
   font-weight: 700;
   font-size: 18px;
   line-height: 40px;
+}
+
+.people-number .form-label {
+  width: 100px;
 }
 
 .navigation-link-main {
@@ -797,6 +823,8 @@ body {
 }
 
 .children-info {
+  box-sizing: border-box;
+  padding-right: 44px;
   position: relative;
 }
 
@@ -869,6 +897,7 @@ body {
 .number-batton {
   position: relative;
   width: 50px;
+  height: 50px;
   border: none;
   padding: 0;
   margin: 0;
@@ -1121,12 +1150,20 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
+.control-input[type="checkbox"]+.control-mark:disabled {
+  opacity: 0.6;
+}
+
 .control-input[type="radio"]:focus+.control-mark {
   box-shadow: inset 0 0 0 3px solid #83B3D3;
 }
 
 .control-input[type="radio"]:checked:focus+.control-mark {
   outline: 3px solid #7c78786e;
+}
+
+.control-input[type="radio"]:disabled+.control-mark {
+  opacity: 0.6;
 }
 
 .control-input[type="checkbox"]:checked+.control-mark::after {
@@ -1694,22 +1731,24 @@ label+label .range-input {
 
 .pagination-show-more::after {
   position: absolute;
-  top: 93px;
+  top: 92px;
   left: -220px;
   content: "";
   width: 1055px;
   height: 0;
   border: 0.2px solid #E6E6E6;
+  opacity: 0.5;
 }
 
 .pagination-show-more::before {
   position: absolute;
-  top: -30px;
+  top: -32px;
   left: -220px;
   content: "";
   width: 1055px;
   height: 0;
   border: 0.2px solid #E6E6E6;
+  opacity: 0.5;
 }
 
 .pagination-show-more:hover {
